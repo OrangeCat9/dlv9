@@ -8,6 +8,7 @@ description: |
   With that in mind, Delve should stay out of your way as much as possible.
 confinement: devmode
 base: core18
+architectures: [amd64]
 parts:
   dlv:
     plugin: go
@@ -21,3 +22,4 @@ parts:
 apps:
   dlv:
     command: bin/dlv
+    plugs: [ network, home]
